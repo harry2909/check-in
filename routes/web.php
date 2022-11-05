@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('dashboard');
+});
+
+Route::get('/success', function () {
+    return view('addsuccess');
 });
