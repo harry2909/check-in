@@ -1,36 +1,41 @@
 <div>
-    <div class="flex justify-center h-auto w-screen items-center px-12">
-        <div
-            class="w-full bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 text-center mt-28 mb-28 overflow-y-auto">
-            <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
-                <div class="w-2 h-2 bg-purple-600 mx-2"></div>
-                <div class="w-2 h-2 bg-blue-500 mx-2"></div>
-                <div class="w-2 h-2 bg-green-300 mx-2"></div>
-                <span class="ml-auto text-sm text-white font-bold">Your Successes</span>
-            </div>
-            <div class="flex flex-wrap flex-row max-h-screen">
-                @foreach($successes as $key => $success)
-                    <div class="p-12 bg-white">
-                        <div class="flex justify-start px-4"><h1 class="text-2xl font-bold">{{ $key }}</h1></div>
-                        <div class="flex flex-wrap justify-center flex-row">
-                            @foreach($success as $successdata)
-                                <div
-                                    class="w-96 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-4 mt-12 mb-12 text-center">
+    <div class="flex justify-center flex-wrap h-auto w-screen items-center px-12">
+        <div class="my-28">
+        @foreach($successes as $key => $success)
+            <div
+                class="w-full bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 text-center my-6 accordion-container">
+                <div class="ac">
+                    <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center ac-trigger">
+                        <div class="w-2 h-2 bg-purple-600 mx-2"></div>
+                        <div class="w-2 h-2 bg-blue-500 mx-2"></div>
+                        <div class="w-2 h-2 bg-green-300 mx-2 mr-auto"></div>
+                        <span class="m-auto text-sm text-white font-bold">{{ $key }}</span>
+                        <span class="ml-auto text-sm text-white font-bold">Your Successes</span>
+                    </div>
+                    <div class="flex flex-wrap flex-row max-h-screen ac-panel overflow-y-auto">
+                        <div class="p-12 bg-white ac-text">
+                            <div class="flex justify-start px-4"><h1 class="text-2xl font-bold">{{ $key }}</h1></div>
+                            <div class="flex flex-wrap justify-center flex-row">
+                                @foreach($success as $successdata)
                                     <div
-                                        class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
-                                        <div class="w-2 h-2 bg-purple-600 mx-2"></div>
-                                        <div class="w-2 h-2 bg-blue-500 mx-2"></div>
-                                        <div class="w-2 h-2 bg-green-300 mx-2"></div>
+                                        class="w-96 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-4 mt-12 mb-12 text-center">
+                                        <div
+                                            class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
+                                            <div class="w-2 h-2 bg-purple-600 mx-2"></div>
+                                            <div class="w-2 h-2 bg-blue-500 mx-2"></div>
+                                            <div class="w-2 h-2 bg-green-300 mx-2"></div>
+                                        </div>
+                                        <div class="flex flex-wrap flex-row p-6 justify-center w-full">
+                                            <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">{{$successdata->description}}</p>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-wrap flex-row p-6 justify-center w-full">
-                                        <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">{{$successdata->description}}</p>
-                                    </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
                     </div>
-                @endforeach
+                </div>
             </div>
+        @endforeach
         </div>
     </div>
 </div>
