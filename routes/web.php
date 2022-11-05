@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/success', function () {
+Route::get('/add-success', function () {
     return view('addsuccess');
 });
