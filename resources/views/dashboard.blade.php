@@ -12,10 +12,9 @@
                 <div class="border-r-2 py-12 h-full w-96">
                     <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Jot down a new
                         success &#128187;</p>
-                    <a href="/success">
+                    <a href="/add-success">
                         <button
-                            class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce"
-                        >
+                            class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce">
                             Let's go
                         </button>
                     </a>
@@ -24,10 +23,9 @@
                     <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">View your
                         successes
                         &#128640;</p>
-                    <a href="/success">
+                    <a href="/add-success">
                         <button
-                            class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce"
-                            href="/success">
+                            class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce">
                             Let's go
                         </button>
                     </a>

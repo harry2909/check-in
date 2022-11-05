@@ -1,9 +1,10 @@
 <div>
     <div class="max-w-lg bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto text-center">
-        <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start">
+        <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
             <div class="w-2 h-2 bg-purple-600 mx-2"></div>
             <div class="w-2 h-2 bg-blue-500 mx-2"></div>
             <div class="w-2 h-2 bg-green-300 mx-2"></div>
+            <span class="ml-auto text-sm text-white font-bold">Add Success</span>
         </div>
         <div class="p-6">
             <div class="{{ $currentStep != 1 ? 'hidden' : 'flex flex-col' }}">
@@ -34,11 +35,12 @@
             <div class="{{ $currentStep != 3 ? 'hidden' : 'flex flex-col' }}">
                 <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Great job! Your
                     success has been saved &#128522;</p>
-                <button
-                    class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce"
-                    wire:click="submitForm">
-                    Dashboard
-                </button>
+                <a href="/">
+                    <button
+                        class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce text-center">
+                        Dashboard
+                    </button>
+                </a>
             </div>
         </div>
     </div>
