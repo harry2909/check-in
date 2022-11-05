@@ -12,13 +12,13 @@
                     the
                     time to note down what went well today &#128522;</p>
                 <button
-                    class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce"
+                    class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate"
                     wire:click="firstStepSubmit">
-                    Let's go
+                    Next
                 </button>
             </div>
             <div class="{{ $currentStep != 2 ? 'hidden' : 'flex flex-col' }}">
-                <p class="mb-4 px-4 font-normal text-md font-bold text-gray-700 dark:text-gray-400 text-left">
+                <p class="mb-4 px-4 font-normal text-md font-bold text-gray-700 dark:text-gray-400 text-left" wire:poll>
                     {{ $currentTime }}</p>
                 <label for="description"
                        class="px-4 mb-3 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Give a
@@ -27,7 +27,7 @@
                           class="mx-4 mb-3 px-4 py-3 rounded-lg focus:transition focus:ease-in focus:outline-none focus:ring focus:ring-purple-400 shadow-lg border"></textarea>
                 @error('description') <span class="font-bold text-blue-500">{{ $message }}</span> @enderror
                 <button
-                    class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce"
+                    class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate"
                     wire:click="secondStepSubmit">
                     Submit
                 </button>
@@ -35,12 +35,19 @@
             <div class="{{ $currentStep != 3 ? 'hidden' : 'flex flex-col' }}">
                 <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Great job! Your
                     success has been saved &#128522;</p>
-                <a href="/">
+                <div class="flex-row whitespace-nowrap">
                     <button
-                        class="mx-auto w-32 px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate hover:animate-bounce text-center">
-                        Dashboard
+                        wire:click="firstStepSubmit"
+                        class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
+                        Add another
                     </button>
-                </a>
+                    <a href="/">
+                        <button
+                            class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
+                            Dashboard
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
