@@ -26,3 +26,33 @@
         background-position: 100% 50%;
     }
 }
+button {
+    text-align: center;
+    transition: all 0.5s;
+}
+
+button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: auto;
+    bottom: auto;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover{
+    padding-right: 24px;
+}
+
+button:hover:after {
+    opacity: 1;
+    right: 10px;
+}

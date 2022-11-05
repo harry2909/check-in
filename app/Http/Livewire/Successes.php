@@ -18,6 +18,7 @@ class Successes extends Component
     }
 
     public function firstStepSubmit() {
+        $this->description = '';
         $this->currentStep = 2;
     }
 

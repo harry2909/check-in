@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/add-success', function () {
     return view('addsuccess');
 });
+
+Route::get('/view-successes', function () {
+    return view('viewsuccesses');
+});
