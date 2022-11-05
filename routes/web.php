@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,17 @@ Route::get('/add-success', function () {
 Route::get('/view-successes', function () {
     return view('viewsuccesses');
 });
+
+Route::get('/', function() {
+    return view('dashboard');
+})->middleware('auth');
+
+Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
+
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::get('/register', [AuthController::class, 'registerPage']);
+
+Route::post('/register', [AuthController::class, 'register']);
