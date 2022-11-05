@@ -14,7 +14,7 @@
                         success &#128187;</p>
                     <a href="/add-success">
                         <button
-                            class="glow-on-hover mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                            class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
                             Let's go
                         </button>
                     </a>

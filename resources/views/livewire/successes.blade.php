@@ -36,17 +36,17 @@
                 <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Great job! Your
                     success has been saved &#128522;</p>
                 <div class="flex-row whitespace-nowrap">
-                <button
-                    wire:click="firstStepSubmit"
-                    class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
-                    Add another
-                </button>
-                <a href="/">
                     <button
+                        wire:click="firstStepSubmit"
                         class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
-                        Dashboard
+                        Add another
                     </button>
-                </a>
+                    <a href="/">
+                        <button
+                            class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
+                            Dashboard
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
