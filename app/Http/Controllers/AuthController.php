@@ -24,7 +24,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             return redirect()
-                ->intended('dashboard')
+                ->intended('/dashboard')
                 ->withSuccess('Signed in');
         }
 
@@ -50,7 +50,7 @@ class AuthController extends Controller
         $user = User::create($input);
         Auth::login($user);
         return redirect()
-            ->intended('dashboard')
+            ->intended('/dashboard')
             ->withSuccess('Signed in');
     }
 
@@ -62,6 +62,6 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

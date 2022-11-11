@@ -14,27 +14,23 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('dashboard');
-});
+})->middleware('auth');
 
 Route::get('/add-success', function () {
     return view('addsuccess');
-});
+})->middleware('auth');
 
 Route::get('/view-successes', function () {
     return view('viewsuccesses');
-});
-
-Route::get('/', function() {
-    return view('dashboard');
 })->middleware('auth');
 
 Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
 
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/register', [AuthController::class, 'registerPage']);
 
