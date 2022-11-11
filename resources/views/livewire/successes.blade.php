@@ -41,7 +41,7 @@
                         class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
                         Add another
                     </button>
-                    <a href="/">
+                    <a href="/dashboard">
                         <button
                             class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
                             Dashboard

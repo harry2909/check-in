@@ -13,6 +13,6 @@ class Success extends Model
      * @var string[]
      */
     protected $fillable = [
-        'description'
+        'description', 'user_id'
     ];
 }

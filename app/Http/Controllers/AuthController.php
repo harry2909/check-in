@@ -5,18 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
 {
 
-    public function loginPage () {
+    public function loginPage()
+    {
         return view('login');
     }
 
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 
@@ -24,11 +26,11 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             return redirect()
-                ->intended('/dashboard')
+                ->intended('dashboard')
                 ->withSuccess('Signed in');
         }
 
-        return back()->withErrors('Login details are not valid');
+        return back()->withErrors(['loginError' => 'Incorrect email or password!']);
 
     }
 
@@ -42,7 +44,12 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => ['required', Password::min(8)
+                ->letters()
+                ->mixedCase()
+                ->numbers()
+                ->symbols()
+                ->uncompromised()]
         ]);
 
         $input = $request->all();
@@ -50,7 +57,7 @@ class AuthController extends Controller
         $user = User::create($input);
         Auth::login($user);
         return redirect()
-            ->intended('/dashboard')
+            ->intended('dashboard')
             ->withSuccess('Signed in');
     }
 
