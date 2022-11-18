@@ -2,7 +2,7 @@
 @section('content')
     <div class="flex justify-center h-screen w-screen items-center px-2">
         <div
-            class="w-full sm:w-full md:w-1/2 lg:1/3 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto text-center">
+            class="w-full sm:w-full md:w-1/2 lg:1/3 bg-white rounded-lg shadow-md  m-auto text-center">
             <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
                 <div class="w-2 h-2 bg-purple-600 mx-2"></div>
                 <div class="w-2 h-2 bg-blue-500 mx-2"></div>
