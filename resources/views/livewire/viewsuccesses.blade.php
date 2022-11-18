@@ -3,7 +3,7 @@
         <div class="my-28">
             @forelse($successes as $key => $success)
                 <div
-                    class="max-w-xs sm:max-w-full w-full bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 text-center my-6 accordion-container">
+                    class="max-w-xs sm:max-w-full w-full bg-white rounded-lg shadow-md  text-center my-6 accordion-container">
                     <div class="ac">
                         <div
                             class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center ac-trigger">
@@ -21,7 +21,7 @@
                                 <div class="flex flex-wrap justify-center flex-row">
                                     @foreach($success as $successdata)
                                         <div
-                                            class="w-full sm:w-80 md:w-52 lg:42 bg-white rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700 m-4 mt-8 mb-8 text-center">
+                                            class="w-full sm:w-80 md:w-52 lg:42 bg-white rounded-lg shadow-2xl  m-4 mt-8 mb-8 text-center">
                                             <div
                                                 class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
                                                 <div class="w-2 h-2 bg-purple-600 mx-2"></div>
@@ -40,7 +40,7 @@
                 </div>
             @empty
                 <div
-                    class="max-w-lg bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto text-center">
+                    class="max-w-lg bg-white rounded-lg shadow-md  m-auto text-center">
                     <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
                         <div class="w-2 h-2 bg-purple-600 mx-2"></div>
                         <div class="w-2 h-2 bg-blue-500 mx-2"></div>
