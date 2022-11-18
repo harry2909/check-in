@@ -55,6 +55,9 @@
                             </button>
                         </div>
                     </form>
+                    @if ($errors->has('registerError'))
+                        <span class="text-blue-500">{{ $errors->first('registerError') }}</span>
+                    @endif
                 </div>
             </div>
         </div>

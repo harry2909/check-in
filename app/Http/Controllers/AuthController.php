@@ -53,6 +53,9 @@ class AuthController extends Controller
         ]);
 
         $input = $request->all();
+        if (User::where('email', '=', $input['email'])->exists()) {
+            return back()->withErrors(['registerError' => 'That email already exists!']);
+        }
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
         Auth::login($user);

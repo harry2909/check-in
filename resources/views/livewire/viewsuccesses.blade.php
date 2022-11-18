@@ -1,7 +1,7 @@
 <div>
-    <div class="flex justify-center flex-wrap h-auto w-screen items-center px-24">
+    <div class="flex justify-center h-screen w-screen flex-wrap w-screen items-center px-24">
         <div class="my-28">
-            @foreach($successes as $key => $success)
+            @forelse($successes as $key => $success)
                 <div
                     class="max-w-xs sm:max-w-full w-full bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 text-center my-6 accordion-container">
                     <div class="ac">
@@ -38,7 +38,28 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div
+                    class="max-w-lg bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto text-center">
+                    <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
+                        <div class="w-2 h-2 bg-purple-600 mx-2"></div>
+                        <div class="w-2 h-2 bg-blue-500 mx-2"></div>
+                        <div class="w-2 h-2 bg-green-300 mx-2"></div>
+                        <span class="ml-auto text-sm text-white font-bold">View Successes</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Looks like
+                            you don't have any successes yet! Let's fix that &#128077</p>
+                        <a href="/add-success">
+                            <button
+                                class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                                Create a success
+                            </button>
+                        </a>
+                    </div>
+                </div>
         </div>
+        @endforelse
     </div>
+</div>
 </div>
