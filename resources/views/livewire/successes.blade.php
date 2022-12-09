@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-lg bg-white rounded-lg shadow-md  m-auto text-center">
+    <div class="max-w-lg bg-white rounded-lg shadow-md m-auto text-center">
         <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
             <div class="w-2 h-2 bg-purple-600 mx-2"></div>
             <div class="w-2 h-2 bg-blue-500 mx-2"></div>
@@ -33,7 +33,8 @@
                 </button>
             </div>
             <div class="{{ $currentStep != 3 ? 'hidden' : 'flex flex-col' }}">
-                <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Great job! Your
+                <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Great
+                    job, this is your {{ $successCount }} success of the day! Your
                     success has been saved &#128522;</p>
                 <div class="flex-row whitespace-nowrap">
                     <button
