@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -56,8 +57,11 @@ class AuthController extends Controller
         if (User::where('email', '=', $input['email'])->exists()) {
             return back()->withErrors(['registerError' => 'That email already exists!']);
         }
-        $input['password'] = bcrypt($input['password']);
-        $user = User::create($input);
+        $hashPass = Hash::make($input['password']);
+        if (!Hash::check($input['password'], $hashPass)) {
+            return back()->withErrors(['registerError' => 'Error with hashing password!']);
+        }
+        $user = User::create(['name' => $input['name'], 'email' => $input['email'], 'password' => $hashPass]);
         Auth::login($user);
         return redirect()
             ->intended('dashboard')

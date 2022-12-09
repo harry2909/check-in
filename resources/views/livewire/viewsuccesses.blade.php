@@ -41,7 +41,16 @@
                                                 <div class="w-2 h-2 bg-green-300 mx-2"></div>
                                             </div>
                                             <div class="flex flex-wrap flex-row p-6 justify-center w-full">
-                                                <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">{{$successdata['description']}}</p>
+                                                <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">
+                                                    {{$successdata['description']}}
+                                                    <br>
+                                                    <a wire:click="deleteSuccess({{$successdata['id']}})">
+                                                        <button
+                                                            class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                                                            Delete
+                                                        </button>
+                                                    </a>
+                                                </p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -61,8 +70,11 @@
                     </div>
                     <div class="p-6">
                         <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">No
-                            results! Looks like
-                            you don't have any successes yet. Let's fix that &#128077</p>
+                            results!
+                            @if($successCount === 0)
+                                Looks like you don't have any successes yet. Let's fix that &#128077</p>
+                        @endif
+                        <br>
                         <a href="/add-success">
                             <button
                                 class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
