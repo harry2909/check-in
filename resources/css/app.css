@@ -26,19 +26,19 @@
         background-position: 100% 50%;
     }
 }
-button {
+.custom-button {
     text-align: center;
     transition: all 0.5s;
 }
 
-button {
+.custom-button {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-button:after {
+.custom-button:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -48,11 +48,11 @@ button:after {
     transition: 0.5s;
 }
 
-button:hover{
+.custom-button:hover{
     padding-right: 24px;
 }
 
-button:hover:after {
+.custom-button:hover:after {
     opacity: 1;
     right: 10px;
 }

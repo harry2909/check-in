@@ -1,6 +1,6 @@
 <div>
     <div class="flex justify-center h-screen w-screen flex-wrap w-screen items-center px-24">
-        <div class="my-28 w-full ">
+        <div class="my-28 w-full">
             <div
                 class="sm:max-w-full min-w-full w-1/2 bg-white rounded-lg shadow-md text-center mx-auto">
                 <div
@@ -13,7 +13,7 @@
                     <span class="ml-auto text-sm text-white font-bold">Total Count: {{$successCount}} | Search (YYYY-MM-DD)</span>
                 </div>
             </div>
-            @forelse($successes as $key => $success)
+            @forelse($successPagination as $key => $success)
                 <div
                     class="sm:max-w-full w-full bg-white rounded-lg shadow-md text-center my-6">
                     <div
@@ -45,7 +45,7 @@
                                                 <br>
                                                 <a wire:click="deleteSuccess({{$successdata['id']}})">
                                                     <button
-                                                        class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                                                        class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
                                                         Delete
                                                     </button>
                                                 </a>
@@ -75,7 +75,7 @@
                         <br>
                         <a href="/add-success">
                             <button
-                                class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                                class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
                                 Create a success
                             </button>
                         </a>
@@ -83,6 +83,8 @@
                 </div>
         </div>
         @endforelse
+        <div class="container mx-auto mb-5">
+            {{$successPagination->links()}}
+        </div>
     </div>
-</div>
 </div>

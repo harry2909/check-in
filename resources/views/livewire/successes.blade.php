@@ -12,7 +12,7 @@
                     the
                     time to note down what went well today &#128522;</p>
                 <button
-                    class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate"
+                    class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate"
                     wire:click="firstStepSubmit">
                     Next
                 </button>
@@ -27,7 +27,7 @@
                           class="mx-4 mb-3 px-4 py-3 rounded-lg focus:transition focus:ease-in focus:outline-none focus:ring focus:ring-purple-400 shadow-lg border"></textarea>
                 @error('description') <span class="font-bold text-blue-500">{{ $message }}</span> @enderror
                 <button
-                    class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate"
+                    class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate"
                     wire:click="secondStepSubmit">
                     Submit
                 </button>
@@ -39,12 +39,12 @@
                 <div class="flex-row whitespace-nowrap">
                     <button
                         wire:click="firstStepSubmit"
-                        class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
+                        class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
                         Add another
                     </button>
                     <a href="/dashboard">
                         <button
-                            class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
+                            class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate text-center">
                             Dashboard
                         </button>
                     </a>
