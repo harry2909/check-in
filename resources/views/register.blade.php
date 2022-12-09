@@ -2,7 +2,7 @@
 @section('content')
     <div class="flex justify-center h-screen w-screen items-center px-2">
         <div
-            class="w-full sm:w-full md:w-1/2 lg:1/3 bg-white rounded-lg shadow-md  m-auto text-center">
+            class="w-full max-w-lg sm:w-full md:w-1/2 lg:1/3 bg-white rounded-lg shadow-md  m-auto text-center">
             <div class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
                 <div class="w-2 h-2 bg-purple-600 mx-2"></div>
                 <div class="w-2 h-2 bg-blue-500 mx-2"></div>
@@ -14,7 +14,7 @@
                     <form class="bg-white rounded px-8 mb-4" method="POST">
                         @csrf
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-md font-bold mb-2" for="name">
+                            <label class="block text-start text-gray-700 text-md font-bold mb-2" for="name">
                                 Full Name
                             </label>
                             <input
@@ -25,7 +25,7 @@
                             @endif
                         </div>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-md font-bold mb-2" for="username">
+                            <label class="block text-start text-gray-700 text-md font-bold mb-2" for="username">
                                 Email
                             </label>
                             <input
@@ -36,7 +36,7 @@
                             @endif
                         </div>
                         <div class="mb-6">
-                            <label class="block text-gray-700 text-md font-bold mb-2" for="password">
+                            <label class="block text-start text-gray-700 text-md font-bold mb-2" for="password">
                                 Password
                             </label>
                             <input

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('successes', function (Blueprint $table) {
             $table->id();
             $table->longText('description');
+            $table->string('submission_date');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
