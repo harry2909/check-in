@@ -15,46 +15,44 @@
             </div>
             @forelse($successes as $key => $success)
                 <div
-                    class="sm:max-w-full w-full bg-white rounded-lg shadow-md text-center my-6 accordion-container">
-                    <div class="ac">
-                        <div
-                            class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center ac-trigger">
-                            <div class="w-2 h-2 bg-purple-600 mx-2"></div>
-                            <div class="w-2 h-2 bg-blue-500 mx-2"></div>
-                            <div class="w-2 h-2 bg-green-300 mx-2 mr-auto"></div>
-                            <span class="m-auto text-sm text-white font-bold">{{ $key }}</span>
-                            <span class="ml-auto text-sm text-white font-bold">Count: {{ count($successes[$key]) }}</span>
-                        </div>
-                        <div
-                            class="flex flex-wrap flex-row max-h-screen ac-panel overflow-y-auto max-w-xs sm:max-w-full rounded-lg">
-                            <div class="p-12 bg-white ac-text">
-                                <div class="flex justify-center lg:justify-start"><h1
-                                        class="text-2xl font-bold">{{ $key }}</h1></div>
-                                <div class="flex flex-wrap justify-center flex-row">
-                                    @foreach($success as $successdata)
+                    class="sm:max-w-full w-full bg-white rounded-lg shadow-md text-center my-6">
+                    <div
+                        class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
+                        <div class="w-2 h-2 bg-purple-600 mx-2"></div>
+                        <div class="w-2 h-2 bg-blue-500 mx-2"></div>
+                        <div class="w-2 h-2 bg-green-300 mx-2 mr-auto"></div>
+                        <span class="m-auto text-sm text-white font-bold">{{ $key }}</span>
+                        <span class="ml-auto text-sm text-white font-bold">Count: {{ count($successes[$key]) }}</span>
+                    </div>
+                    <div
+                        class="flex flex-wrap flex-row max-h-screen overflow-y-auto max-w-xs sm:max-w-full rounded-lg">
+                        <div class="p-12 bg-white">
+                            <div class="flex justify-center lg:justify-start"><h1
+                                    class="text-2xl font-bold">{{ $key }}</h1></div>
+                            <div class="flex flex-wrap justify-center flex-row">
+                                @foreach($success as $successdata)
+                                    <div
+                                        class="w-full bg-white rounded-lg shadow-2xl  m-4 mt-8 mb-8 text-center">
                                         <div
-                                            class="w-full bg-white rounded-lg shadow-2xl  m-4 mt-8 mb-8 text-center">
-                                            <div
-                                                class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
-                                                <div class="w-2 h-2 bg-purple-600 mx-2"></div>
-                                                <div class="w-2 h-2 bg-blue-500 mx-2"></div>
-                                                <div class="w-2 h-2 bg-green-300 mx-2"></div>
-                                            </div>
-                                            <div class="flex flex-wrap flex-row p-6 justify-center w-full">
-                                                <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">
-                                                    {{$successdata['description']}}
-                                                    <br>
-                                                    <a wire:click="deleteSuccess({{$successdata['id']}})">
-                                                        <button
-                                                            class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
-                                                            Delete
-                                                        </button>
-                                                    </a>
-                                                </p>
-                                            </div>
+                                            class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
+                                            <div class="w-2 h-2 bg-purple-600 mx-2"></div>
+                                            <div class="w-2 h-2 bg-blue-500 mx-2"></div>
+                                            <div class="w-2 h-2 bg-green-300 mx-2"></div>
                                         </div>
-                                    @endforeach
-                                </div>
+                                        <div class="flex flex-wrap flex-row p-6 justify-center w-full">
+                                            <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">
+                                                {{$successdata['description']}}
+                                                <br>
+                                                <a wire:click="deleteSuccess({{$successdata['id']}})">
+                                                    <button
+                                                        class="mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                                                        Delete
+                                                    </button>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
