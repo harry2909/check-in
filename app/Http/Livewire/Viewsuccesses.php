@@ -8,7 +8,6 @@ use App\Models\Success;
 
 class Viewsuccesses extends Component
 {
-
     public array $successes = [];
     public string $search = '';
     public array $formattedArray = [];

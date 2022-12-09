@@ -8,9 +8,9 @@
                     <label for="search" class="hidden">Search</label>
                     <input id="search"
                            wire:model="search"
-                           class="mx-4 shadow appearance-none border rounded w-3/4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:transition focus:ease-in focus:outline-none focus:ring focus:ring-purple-400"
+                           class="mx-4 shadow appearance-none border rounded w-2/4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:transition focus:ease-in focus:outline-none focus:ring focus:ring-purple-400"
                            type="text">
-                    <span class="ml-auto text-sm text-white font-bold">Search (YYYY-MM-DD)</span>
+                    <span class="ml-auto text-sm text-white font-bold">Total Count: {{$successCount}} | Search (YYYY-MM-DD)</span>
                 </div>
             </div>
             @forelse($successes as $key => $success)

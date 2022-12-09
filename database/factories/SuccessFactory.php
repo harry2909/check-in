@@ -18,7 +18,8 @@ class SuccessFactory extends Factory
     {
         return [
             'description' => fake()->paragraph(),
-            'created_at' => fake()->dateTime(),
+            'submission_date' => fake()->date('Y-m-d', '2050-12-25'),
+            'user_id' => 1,
         ];
     }
 }
