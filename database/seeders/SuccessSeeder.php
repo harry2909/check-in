@@ -14,6 +14,6 @@ class SuccessSeeder extends Seeder
      */
     public function run()
     {
-       Success::factory()->count(1000)->create();
+       Success::factory()->count(100)->create();
     }
 }
