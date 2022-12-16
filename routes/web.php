@@ -30,6 +30,10 @@ Route::get('/view-successes', function () {
     return view('viewsuccesses');
 })->middleware('auth');
 
+Route::get('/rate-my-day', function () {
+    return view('ratemyday');
+})->middleware('auth');
+
 Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
 
 Route::post('/login', [AuthController::class, 'login']);
