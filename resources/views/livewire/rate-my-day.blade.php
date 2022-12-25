@@ -26,7 +26,7 @@
                 </div>
                 <div class="flex flex-wrap flex-row p-3">
                     @foreach($emojis as $emoji)
-                        <div class="mx-2 pointer"
+                        <div class="mx-2 pointer text-2xl"
                              wire:click="secondStepSubmit({{$emoji->id}})">{!!$emoji->emoji_html!!}</div>
                     @endforeach
                 </div>

@@ -10,6 +10,6 @@ class EmojiCalendar extends Model
     use HasFactory;
 
     protected $fillable = [
-        'submission_date', 'emoji_ID'
+        'submission_date', 'emoji_ID', 'user_id'
     ];
 }

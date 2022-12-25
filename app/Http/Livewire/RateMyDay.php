@@ -29,9 +29,11 @@ class RateMyDay extends Component
     public function secondStepSubmit($emojiID)
     {
         if ($emojiID) {
+            $userID = Auth::id();
             EmojiCalendar::create([
                 'submission_date' => date('Y-m-d', strtotime('today')),
-                'emoji_ID' => $emojiID
+                'emoji_ID' => $emojiID,
+                'user_id' => $userID,
             ]);
             $this->currentStep = 3;
         }
