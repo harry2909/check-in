@@ -35,6 +35,10 @@ Route::get('/rate-my-day', function () {
     return view('ratemyday');
 })->middleware('auth');
 
+Route::get('/statistics', function () {
+    return view('statistics');
+})->middleware('auth');
+
 Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
 
 Route::post('/login', [AuthController::class, 'login']);
