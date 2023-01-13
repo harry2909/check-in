@@ -56,3 +56,7 @@
     opacity: 1;
     right: 10px;
 }
+
+.pointer {
+    cursor: pointer;
+}
