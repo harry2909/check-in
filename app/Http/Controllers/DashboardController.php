@@ -19,9 +19,11 @@ class DashboardController extends Controller
         $emojiRating = EmojiCalendar::where('submission_date', $currentDate)
             ->where('user_id', Auth::id())
             ->first();
-        $specificEmoji = EmojiRating::where('id', $emojiRating->emoji_ID)->first();
-        $emojiHTML = $specificEmoji->emoji_html;
-        return view('dashboard')->with('emojiHTML', $emojiHTML);
+        if ($emojiRating) {
+            $specificEmoji = EmojiRating::where('id', $emojiRating->emoji_ID)->first();
+            $emojiHTML = $specificEmoji->emoji_html;
+        }
+        return view('dashboard')->with('emojiHTML', $emojiHTML ?? null);
     }
 
 }

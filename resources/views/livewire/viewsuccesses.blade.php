@@ -32,7 +32,7 @@
                             <div class="flex flex-wrap justify-center flex-row">
                                 @foreach($success as $successdata)
                                     <div
-                                        class="w-1/3 bg-white rounded-lg shadow-2xl  m-4 mt-8 mb-8 text-center">
+                                        class="w-full bg-white rounded-lg shadow-2xl  m-4 mt-8 mb-8 text-center">
                                         <div
                                             class="p-4 bg-slate-700 rounded-t-lg flex justify-start align-middle items-center">
                                             <div class="w-2 h-2 bg-purple-600 mx-2"></div>
