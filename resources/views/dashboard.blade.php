@@ -10,9 +10,9 @@
                 <span class="ml-auto text-sm text-white font-bold">Dashboard</span>
             </div>
             <div class="flex justify-center">
-                <div class="border-r-2 py-12 h-full w-96">
+                <div class="border-r-2 border-b-2 py-12 min-h-full w-96">
                     <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Jot down a new
-                        success &#128187;</p>
+                        success <span class="text-2xl">&#128187;</span></p>
                     <a href="/add-success">
                         <button
                             class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
@@ -20,7 +20,7 @@
                         </button>
                     </a>
                 </div>
-                <div class="h-full py-12 w-96">
+                <div class="min-h-full border-b-2 py-12 w-96">
                     <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">View your
                         successes
                         <span class="text-2xl">&#128640;</span></p>
@@ -33,8 +33,9 @@
                 </div>
             </div>
             <div class="flex justify-center">
-                <div class="border-t-2 py-12 h-full w-full">
-                    <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Your current rating today:</p>
+                <div class="border-r-2 py-12 min-h-full w-96">
+                    <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">Your current
+                        rating today:</p>
                     @if($emojiHTML)
                         <div class="text-2xl">{!! $emojiHTML !!}</div>
                     @else
@@ -47,6 +48,17 @@
                             </button>
                         </a>
                     @endif
+                </div>
+                <div class="min-h-full py-12 w-96">
+                    <p class="px-4 mb-2 font-normal text-xl text-gray-700 dark:text-gray-400 text-center">View your
+                        stats
+                        <span class="text-2xl">&#128202;</span></p>
+                    <a href="/statistics">
+                        <button
+                            class="custom-button mx-auto w-auto px-6 my-2 py-2 text-white text-lg mt-3 rounded-md bg-gradient-to-r from-purple-600 via-blue-500 to-green-300 background-animate">
+                            Let's go
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
